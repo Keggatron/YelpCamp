@@ -16,8 +16,9 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
     
+// mongodb://localhost/yelp_camp_v13
+mongoose.connect("mongodb://admin:admin@ds151433.mlab.com:51433/yelpcamp-keggatron", {useMongoClient: true});
 
-mongoose.connect("mongodb://localhost/yelp_camp_v13", {useMongoClient: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 // Connecting CSS Stylesheet Video 281 - Serving public directory to link to
